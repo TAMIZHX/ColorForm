@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Automatically Changing Background Color</title>
+    <style>
+        body {
+            transition: background-color 0.5s ease-in-out;
+        }
+    </style>
+    <script>
+        function changeColor() {
+            var color = '#' + Math.floor(Math.random() * 16777215).toString(16); 
+            document.body.style.backgroundColor = color;
+        }
+
+        setInterval(changeColor, 2000); 
+    </script>
+</head>
+<body>
+    <form>
+        <form action="">
+            <div class="contact-container">
+                <div class="right">
+                    <h1 class="title">Signup</h1>
+                    <img class="logo" src="images/logo.png" alt="">
+                    <div class="form-container">
+                        <div class="Name">
+                            <img class="icon person-icon" src="icons/person.png" alt="">
+                            <input type="text" class="name-input" id="iname" placeholder="Name">
+                        </div>
+                        <div class="Name">
+                            <img class="icon email-icon" src="icons/email.svg" alt="">
+                            <input type="email" class="user-input" id="mail" placeholder="E-Mail">
+                        </div>
+                        <div class="password">
+                            <img class="icon password-icon" src="icons/password lock.svg" alt="">
+                            <input type="password" class="pass-input" id="pass" placeholder="Password">
+                        </div>
+                        <div class="password">
+                            <img class="icon password-icon" src="icons/password lock.svg" alt="">
+                            <input type="password" class="cpass-input" id="cpass" placeholder="Confirm-Password">
+                        </div>
+                        
+                        <button type="button" id="btn">Signup</button>
+                        <a href="Log.html" class="link">Signin</a>
+                    </div>
+                </div>
+            </div>
+           </form>
+
+    <script>
+        changeColor(); // Initial background color change
+    </script>
+</body>
+</html>
